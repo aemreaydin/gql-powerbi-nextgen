@@ -1,0 +1,33 @@
+# Write your query or mutation here
+query GetAll {
+  getAllSchemas {
+    id
+    name
+    folders {
+      id
+      name
+      charts {
+        id
+        name
+      }
+    }
+  }
+}
+
+query GetAllFolders {
+  getAllFoldersFromSchema(id: 2) {
+    id
+    name
+  }
+}
+
+query GetSchemaData {
+  getSchemaData(id: 1) {
+    name
+    id
+    folders {
+      name
+      id
+    }
+  }
+}
